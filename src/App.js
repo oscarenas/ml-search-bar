@@ -1,6 +1,11 @@
 import React, { Component } from "react";
 import "./styles/App.scss";
-
+import Home from "./pages/Home";
+import Product from "./pages/Product";
+import Search from "./pages/Search";
+import NavBar from "./components/NavBar";
+import ErrorPage from "./pages/ErrorPage";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 class App extends Component {
   constructor(props) {
     super(props);
@@ -25,22 +30,19 @@ class App extends Component {
 
   render() {
     return (
-      <>
+      <Router>
+        <NavBar />
         <section className="section">
           <div className="container is-fluid">
-            <h1 className="title">Hello World</h1>
-            <p className="subtitle">
-              Mercado Libre <strong>Search item </strong>!
-            </p>
-            <div className="columns">
-              <div className="column">First column</div>
-              <div className="column">Second column</div>
-              <div className="column">Third column</div>
-              <div className="column">Fourth column</div>
-            </div>
+            <Switch>
+              <Route path="/" exact component={Home} />
+              <Route path="/items/:id" exact component={Product} />
+              <Route path="/items" exact component={Search} />
+              <Route component={ErrorPage} />
+            </Switch>
           </div>
         </section>
-      </>
+      </Router>
     );
   }
 }
