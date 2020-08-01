@@ -7,7 +7,7 @@ class Search extends Component {
   }
 
   render() {
-    return <div>🔍 SEARCH PRODUCT {this.props.location.search}</div>;
+    return <div>SEARCH PRODUCT {this.props.location.search}</div>;
   }
 }
 
