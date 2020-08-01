@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
-import "./App.css";
+import "./styles/App.scss";
 
 class App extends Component {
   constructor(props) {
@@ -26,33 +25,22 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <form onSubmit={this.handleSubmit}>
-            <label htmlFor="name">Enter your name: </label>
-            <input
-              id="name"
-              type="text"
-              value={this.state.name}
-              onChange={this.handleChange}
-            />
-            <button type="submit">Submit</button>
-          </form>
-          <p>{this.state.greeting}</p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <>
+        <section className="section">
+          <div className="container is-fluid">
+            <h1 className="title">Hello World</h1>
+            <p className="subtitle">
+              Mercado Libre <strong>Search item </strong>!
+            </p>
+            <div className="columns">
+              <div className="column">First column</div>
+              <div className="column">Second column</div>
+              <div className="column">Third column</div>
+              <div className="column">Fourth column</div>
+            </div>
+          </div>
+        </section>
+      </>
     );
   }
 }

@@ -1,0 +1,48 @@
+@charset 'utf-8';
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('https://http2.mlstatic.com/ui/webfonts/v3.0.0/proxima-nova/proximanova-light.woff2') format('woff2')
+}
+
+// Set your brand colors
+$yellow: #FFE600;
+$grey-darker: #333333;
+$grey-dark: #666666;
+$grey-light: #999999;
+$grey-lighter: #eeeeee;
+
+// Update Bulma's global variables
+$family-sans-serif: 'Proxima Nova',
+-apple-system,
+'Helvetica Neue',
+Helvetica,
+Roboto,
+Arial,
+sans-serif;
+
+$text: $grey-dark;
+$primary: $yellow;
+$widescreen-enabled: false;
+$fullhd-enabled: false;
+
+$body-background-color: $grey-lighter;
+
+// Update some of Bulma's component variables
+$control-border-width: 2px;
+$input-border-color: transparent;
+$input-shadow: none;
+
+
+
+// Import only what you need from Bulma
+@import '../../node_modules/bulma/sass/utilities/_all.sass';
+@import '../../node_modules/bulma/sass/base/_all.sass';
+@import '../../node_modules/bulma/sass/elements/button.sass';
+@import '../../node_modules/bulma/sass/elements/container.sass';
+@import '../../node_modules/bulma/sass/elements/form.sass';
+@import '../../node_modules/bulma/sass/elements/title.sass';
+@import '../../node_modules/bulma/sass/components/navbar.sass';
+@import '../../node_modules/bulma/sass/layout/_all.sass';
+@import '../../node_modules/bulma/sass/grid/_all.sass';
+@import '../../node_modules/bulma/sass/form/_all.sass';
