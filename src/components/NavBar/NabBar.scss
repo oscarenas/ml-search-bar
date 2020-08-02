@@ -1,8 +1,45 @@
 @charset 'utf-8';
+@import '../../styles/mixins.scss';
 
 .ml {
   &-navbar {
     background-color: #FFE600;
+    height: 60px;
+    margin-top: 10px;
+  }
+
+  &-navbar-input {
+    width: 100%;
+  }
+
+  &-navbar-brand {
+    margin-left: 3px;
+  }
+
+  &-navbar-button {
+    background-image: url('../../static/images/ic_Search.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    border: transparent;
+    background-color: #eee;
+    width: 48px;
+    height: 35px;
+  }
+
+  &-navbar-start {
+    margin-left: -3%;
+  }
+
+  &-navbar-input {
+    height: 35px;
+
+    @include placeholder {
+      font-size: 18px;
+    }
+  }
+
+  &-hidden {
+    display: none;
   }
 
 }

@@ -1,0 +1,26 @@
+@import "../../styles/BrandColors.scss";
+
+.ml {
+  &-breadcum {
+    padding: 0;
+    margin: 0;
+    line-height: 0;
+  }
+}
+
+.columns:not(:last-child) {
+  margin: 16px 0;
+}
+
+.breadcrumb.has-succeeds-separator li+li::before {
+  content: "\203A";
+}
+
+.breadcrumb a {
+  color: $grey-light;
+  font-size: 14px;
+}
+
+.breadcrumb li.is-active a {
+  font-weight: bold;
+}

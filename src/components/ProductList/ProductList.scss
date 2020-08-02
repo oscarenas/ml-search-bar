@@ -1,0 +1,61 @@
+@import "../../styles/BrandColors.scss";
+
+.ml {
+  &-product-card {
+    box-shadow: none;
+    border-radius: 4px;
+    padding: 16px;
+  }
+
+  &-product-card-content {
+    padding: 0;
+  }
+
+  &-product-price {
+    font-size: 24px;
+    font-weight: 400;
+    color: $grey-darker;
+    padding-bottom: 32px;
+    margin-top: 16px;
+
+    >img {
+      margin-left: 15px;
+    }
+  }
+
+  &-product-info {
+    font-size: 18px;
+    color: $grey-darker;
+    display: inline;
+  }
+
+  &-product-city {
+    margin-top: 25px;
+    color: $grey-dark;
+    font-size: 12px;
+  }
+
+  &-media-section {
+    border-bottom: solid 1px $grey-lighter;
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+  }
+
+  &-media-content {
+    max-width: 180px;
+  }
+
+  &-media-left {
+    margin-right: 16px;
+    text-align: center;
+  }
+
+  &-media-img {
+    width: 180px;
+    border-radius: 4px;
+  }
+
+  &-currency {
+    margin-right: 10px;
+  }
+}
