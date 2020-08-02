@@ -15,17 +15,16 @@ class Search extends Component {
   }
 
   componentDidMount() {
-    const data = this.getData().then((data) => {
-      this.setState({ searchData: data });
-      this.setState({ load: true });
-    });
+    this.getData();
   }
 
   async getData() {
     const res = await axios
       .get(`/api/items?q=${this.props.location.search.split("?search=")[1]}`)
       .then((response) => {
-        return response.data.search;
+        this.setState({ searchData: response.data.search });
+        this.setState({ load: true });
+        //return response.data.search;
       });
     return await res;
   }
