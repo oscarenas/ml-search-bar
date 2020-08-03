@@ -11,7 +11,7 @@ import "./Breadcum.scss";
  */
 export default function Breadcums(props) {
   function NumberList() {
-    if (props.category.length) {
+    if (props.category) {
       const listItems = props.category.map((category, index) => (
         <li
           key={index}

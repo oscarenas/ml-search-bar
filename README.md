@@ -15,7 +15,7 @@ npm install
 You can start the server on its own with the command:
 
 ```bash
-npm run server
+node server
 ```
 
 Then, run the React application on its own with the command:
