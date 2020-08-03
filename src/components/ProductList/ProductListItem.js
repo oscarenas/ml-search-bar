@@ -4,6 +4,14 @@ import { Link } from "react-router-dom";
 import "./ProductList.scss";
 import shippingIcon from "../../static/images/ic_shipping.png";
 
+/**
+ * ```
+ * ProductListItem(props)
+ * ```
+ * - Set the `<ProductListItem />` element.
+ * @param   {Object} props  Props inherited from the parent container
+ * @returns {Element} `<ProductListItem />`
+ */
 export default function ProductListItem(props) {
   return (
     <article className="ml-media-section">

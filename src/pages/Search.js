@@ -4,6 +4,12 @@ import ProductList from "../components/ProductList";
 import Loader from "../components/Loader";
 import Breadcums from "../components/Breadcums";
 import axios from "axios";
+
+/**
+ * Component for Search page.
+ *
+ * @component
+ */
 class Search extends Component {
   constructor(props) {
     super(props);
@@ -24,7 +30,6 @@ class Search extends Component {
       .then((response) => {
         this.setState({ searchData: response.data.search });
         this.setState({ load: true });
-        //return response.data.search;
       });
     return await res;
   }

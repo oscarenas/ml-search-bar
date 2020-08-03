@@ -1,7 +1,16 @@
 import React from "react";
 import "./ProductItem.scss";
+
+/**
+ * ```
+ * ProductItem(props)
+ * ```
+ * - Set the `<ProductItem />` element.
+ * @param   {Object} props  Props inherited from the parent container
+ * @returns {Element} `<ProductItem />`
+ */
 export default function ProductItem(props) {
-  const { itemInfo: product, itemDesc: desc } = props;
+  const { itemInfo: product } = props;
 
   function formatPrice(price) {
     const tmpPrice = price.amount
@@ -65,7 +74,7 @@ export default function ProductItem(props) {
                       Descripción del producto
                     </h3>
                     <div className="ml-item-text" tabIndex="0">
-                      {desc.split("\n").map((i, key) => {
+                      {product.item.description.split("\n").map((i, key) => {
                         return (
                           <p key={key}>
                             {i}

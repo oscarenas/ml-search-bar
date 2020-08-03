@@ -2,7 +2,15 @@ import React, { useRef, useEffect, useState } from "react";
 import "./NabBar.scss";
 import Logo from "../../static/images/Logo_ML.png";
 import { Link, useHistory } from "react-router-dom";
-function NavBar(props) {
+
+/**
+ * ```
+ * NavBar()
+ * ```
+ * - Set the `<NavBar />` element.
+ * @returns {Element} `<NavBar />`
+ */
+function NavBar() {
   let history = useHistory();
   const [ItemSearch, setItemSearch] = useState("");
   const searchInput = useRef(null);

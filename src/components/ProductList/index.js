@@ -1,9 +1,16 @@
 import React from "react";
 import ProductListItem from "./ProductListItem";
 import "./ProductList.scss";
-export default function ProductList(props) {
-  console.log("ProductList", props);
 
+/**
+ * ```
+ * ProductList(props)
+ * ```
+ * - Set the `<ProductList />` element.
+ * @param   {Object} props  Props inherited from the parent container
+ * @returns {Element} `<ProductList />`
+ */
+export default function ProductList(props) {
   function ListItem() {
     return props.data.items.map((product) => (
       <ProductListItem
