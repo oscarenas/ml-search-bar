@@ -1,0 +1,82 @@
+@import "../../styles/BrandColors.scss";
+
+.ml {
+  &-product-image {
+    img {
+      max-width: 680px;
+      width: 100%;
+    }
+  }
+
+  &-product-sold {
+    margin-bottom: 16px;
+    font-size: 14px;
+    color: $grey-darker;
+  }
+
+  &-product-title {
+    margin-bottom: 32px;
+    margin-right: 32px;
+    margin-top: 0;
+    font-size: 24px;
+    color: $grey-darker;
+    font-weight: 700;
+  }
+
+  &-item-price {
+    margin-bottom: 32px;
+    margin-right: 32px;
+    margin-top: 0;
+    font-size: 46px;
+    color: $grey-darker;
+    font-weight: 400;
+  }
+
+  &-button-buy {
+    margin-right: 32px;
+    background-color: $blue-link;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+
+  &-card-item {
+    padding: 32px 0 0 0;
+    margin-bottom: 64px;
+    box-shadow: none;
+    border-radius: 4px;
+  }
+
+  &-card-item-content {
+    padding: 0;
+  }
+
+  &-item-info {
+    margin-left: 32px;
+  }
+
+  &-item-desc {
+    font-size: 28px;
+    font-weight: 400;
+    margin-bottom: 32px;
+    color: $grey-darker;
+  }
+
+  &-item-text {
+    font-size: 16px;
+    color: $grey-light;
+    margin-bottom: 32px;
+  }
+
+  &-price-decimals {
+    font-size: 28px;
+    vertical-align: super;
+  }
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-bottom: 20px;
+}

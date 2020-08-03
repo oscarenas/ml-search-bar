@@ -6,6 +6,7 @@ import Search from "./pages/Search";
 import NavBar from "./components/NavBar";
 import ErrorPage from "./pages/ErrorPage";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import "./styles/App.scss";
 class App extends Component {
   constructor(props) {
     super(props);
@@ -32,15 +33,13 @@ class App extends Component {
     return (
       <Router>
         <NavBar />
-        <section className="section">
-          <div className="container is-fluid">
-            <Switch>
-              <Route path="/" exact component={Home} />
-              <Route path="/items/:id" exact component={Product} />
-              <Route path="/items" exact component={Search} />
-              <Route component={ErrorPage} />
-            </Switch>
-          </div>
+        <section className="ml-section">
+          <Switch>
+            <Route path="/" exact component={Home} />
+            <Route path="/items/:id" exact component={Product} />
+            <Route path="/items" exact component={Search} />
+            <Route component={ErrorPage} />
+          </Switch>
         </section>
       </Router>
     );
