@@ -1,6 +1,14 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "./Breadcum.scss";
+
+/**
+ * ```
+ * Breadcums(props)
+ * ```
+ * - Set the `<Breadcum />` element according to the requeriments
+ * @param   {Object} props  Props inherited from the parent container
+ * @returns {Element} `<Breadcum />`
+ */
 export default function Breadcums(props) {
   function NumberList() {
     if (props.category.length) {
@@ -23,6 +31,13 @@ export default function Breadcums(props) {
     }
   }
 
+  /**
+   * ```
+   * redirectCategory(category)
+   * ```
+   * - Redirect to the new category
+   * @param   {String} category  Redirect to the category
+   */
   function redirectCategory(category) {
     window.location.replace(`/items?search=${category}`);
   }

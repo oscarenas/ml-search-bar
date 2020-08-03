@@ -1,5 +1,11 @@
 import React, { Component } from "react";
 import { Helmet } from "react-helmet";
+
+/**
+ * Component for home page.
+ *
+ * @component
+ */
 class Home extends Component {
   render() {
     return (

@@ -4,42 +4,33 @@ import ProductItem from "../components/ProductItem";
 import Loader from "../components/Loader";
 import Breadcums from "../components/Breadcums";
 import axios from "axios";
-export class Product extends Component {
+
+/**
+ * Component for Product page.
+ *
+ * @component
+ */
+class Product extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
       productId: props.match.params.id,
       productData: {},
-      productDesc: {},
+      load: false,
     };
   }
 
   componentDidMount() {
     this.getItemData();
-    Promise.all([this.getItemData(), this.getDescriptionData()]).then(
-      (values) => {
-        this.setState({ productData: values[0] });
-        this.setState({ productDesc: values[1] });
-        this.setState({ load: true });
-      }
-    );
   }
 
   async getItemData() {
     const res = await axios
       .get(`/api/items/${this.state.productId}`)
       .then((response) => {
-        return response.data.item;
-      });
-    return await res;
-  }
-
-  async getDescriptionData() {
-    const res = await axios
-      .get(`/api/items/${this.state.productId}/description`)
-      .then((response) => {
-        return response.data.description;
+        this.setState({ productData: response.data.item });
+        this.setState({ load: true });
       });
     return await res;
   }
@@ -68,7 +59,7 @@ export class Product extends Component {
               ],
               "@id": "http://mercadolibre.com",
               "name": "Mercado Libre | ${this.state.productData.item.title}",
-              "description": "${this.state.productDesc}",
+              "description": "${this.state.productData.item.description}",
               "aggregateRating": {
                 "@type": "AggregateRating",
                 "ratingValue": "4.4",
@@ -93,10 +84,7 @@ export class Product extends Component {
             <Breadcums
               category={this.props.location.state.categories.productCategory}
             />
-            <ProductItem
-              itemInfo={this.state.productData}
-              itemDesc={this.state.productDesc}
-            />
+            <ProductItem itemInfo={this.state.productData} />
           </>
         ) : (
           <Loader />

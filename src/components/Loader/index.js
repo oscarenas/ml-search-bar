@@ -1,5 +1,13 @@
 import React from "react";
 import "./Loader.scss";
+
+/**
+ * ```
+ * Loader()
+ * ```
+ * - Set the `<Loader />` element.
+ * @returns {Element} `<Loader />`
+ */
 export default function Loader() {
   return (
     <div className="columns is-mobile">
