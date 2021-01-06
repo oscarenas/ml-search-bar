@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "@types/jest": "^26.0.8",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "bulma": "^0.9.0",
     "node-sass": "^4.14.1",
     "react": "^16.13.0",
